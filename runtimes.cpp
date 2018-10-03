@@ -32,7 +32,7 @@ void expcounter(unsigned long N, unsigned long start) {
 		// printf("i=%lu\n", i); // Uncomment here to see the current i value.
 		count++;
 	}
-	std::cout << "Count: " << count << " | ";
+	std::cout << count << " | ";
 }
 
 int main(int argc, char const *argv[]) {
@@ -45,12 +45,12 @@ int main(int argc, char const *argv[]) {
 	int max = 10;
 
 	for (int i = 2; i < max; i++) {
-		std::cout << "Starting i = " << i << "\n";
 		for (int j = 1; j < 8; j++) {
 			if (N > 0) {
-				std::cout << "N = " << pow(N, j) << " | ";
+				std::cout << i << " | ";
+				std::cout << pow(N, j) << " | ";
 				expcounter(pow(N, j), i);
-				std::cout << "Hypothesis = " << ceil(log_b(2, log_b(i, pow(N, j)))) << "\n";
+				std::cout << ceil(log_b(2, log_b(i, pow(N, j)))) << "\n";
 			}
 		}
 		std::cout << "\n";
